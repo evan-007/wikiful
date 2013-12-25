@@ -1,10 +1,15 @@
 Wikiful::Application.routes.draw do
+  #get "articles/index"
+  #get "articles/show"
+  #get "articles/new"
+  #get "articles/create"
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
    root 'welcome#index'
+   resources :articles
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
