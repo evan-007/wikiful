@@ -1,6 +1,6 @@
 <h1><%= @category.name %> articles in order of freshness</h1>
 <div>
-	<% @category_articles.order(created_at: :desc).each do |category_article| %>
+	<% @category.articles.order(created_at: :desc).each do |category_article| %>
 	<li><%= link_to category_article.title, category_article %> <%= category_article.created_at %></li>
 	<% end %>
 </div>
