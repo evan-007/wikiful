@@ -1,5 +1,5 @@
 Wikiful::Application.routes.draw do
-  #get "articles/index"
+  #get "articles/index" - these are define by resources
   #get "articles/show"
   #get "articles/new"
   #get "articles/create"
