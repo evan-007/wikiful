@@ -1,6 +1,6 @@
 <h1><%= @category.name %></h1>
 <div>
-	<% @category_articles.each do |category_article| %>
+	<% @category_articles.order(:title).each do |category_article| %>
 	<li><%= link_to category_article.title, category_article %></li>
 	<% end %>
 </div>
