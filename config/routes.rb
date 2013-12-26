@@ -1,6 +1,6 @@
 Wikiful::Application.routes.draw do
-  get "categories/index"
-  get "categories/show"
+  #get "categories/index"
+  #get "categories/show"
   #get "articles/index" - these are define by resources
   #get "articles/show"
   #get "articles/new"
@@ -11,7 +11,7 @@ Wikiful::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'welcome#index'
-   resources :articles
+   resources :articles, :categories
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
