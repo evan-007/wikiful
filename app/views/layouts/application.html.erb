@@ -14,7 +14,7 @@
 				<%= link_to "Wikiful", root_path, :class => "brand" %>
 				<div style="float:right;">
 					<div class="btn-group">
-						<button type="button" class="btn btn-default">Signup</button>
+						<%= link_to "Signup", new_user_path, :class => "btn btn-default" %>
 						<button type="button" class="btn btn-default">Login</button>
 					</div>
 				</div>
@@ -33,9 +33,7 @@
 		<div class="span3 sidebar">
 			<div class="my-wiki-site">
 				<h4>My Wikiful</h4>
-				<ul>
-					<li><%= link_to "Write a Wiki", new_article_path %></li>
-				</ul>
+				<li><%= link_to "Write a Wiki", new_article_path %></li>
 			</div>
 			<div class="categories-sidebar">
 				<h4>Categories</h4>
