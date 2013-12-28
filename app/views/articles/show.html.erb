@@ -4,5 +4,6 @@
 <p>Filed under: <% @article.categories.each do |category| %>
 	<%= link_to category.name, category %>&nbsp;<% end %>
 </p>
-<div><%= @article.content %></div>
+<div><%= simple_format(@article.content)%></div>
+
 </div>
