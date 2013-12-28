@@ -8,19 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<%= link_to "Wikiful", root_path, :class => "brand" %>
-				<div style="float:right;">
-					<div class="btn-group">
-						<%= link_to "Signup", new_user_path, :class => "btn btn-default" %>
-						<button type="button" class="btn btn-default">Login</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<%= render 'layouts/header' %>
 	<div class="container">
 		<div class="row">
 			<div class="span4">
@@ -31,22 +19,7 @@
 			<div class="row">
 		<div class="span9"><%= yield %></div>
 		<div class="span3 sidebar">
-			<div class="my-wiki-site">
-				<h4>My Wikiful</h4>
-				<li><%= link_to "Write a Wiki", new_article_path %></li>
-			</div>
-			<div class="categories-sidebar">
-				<h4>Categories</h4>
-			</ul>
-			<% @categories.each do |category| %>
-		        <li><%= link_to category.name, category %></li>
-			<% end %>
-		    </ul>
-		    </div>
-		    <div class="about">
-			    <h4>About Wikiful</h4>
-			    <p>Here is the about div class</p>
-		    </div>
+			<%= render 'layouts/sidebar' %>
 	    </div>
 	</div>
 	<%= render 'layouts/footer' %>

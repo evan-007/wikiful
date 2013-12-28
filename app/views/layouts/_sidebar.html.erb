@@ -1,0 +1,14 @@
+<div class="my-wiki-site">
+	<h4>My Wikiful</h4>
+	<li><%= link_to "Write a Wiki", new_article_path %></li>
+</div>
+<div class="categories-sidebar">
+	<h4>Categories</h4>
+	    <% @categories.each do |category| %>
+		    <li><%= link_to category.name, category %></li>
+		<% end %>
+</div>
+<div class="about">
+	<h4>About Wikiful</h4>
+		<p>It's a project for thinkful</p>
+</div>
