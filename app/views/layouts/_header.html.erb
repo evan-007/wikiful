@@ -3,10 +3,16 @@
 		<div class="container">
 			<%= link_to "Wikiful: Semper Ubi Sub Ubi", root_path, :class => "brand" %>
 			<div style="float:right;">
+				<div class="session-controls">
+					<% if current_user %>
+					Logged in as <%= current_user.email %>
+					<% else %>
 				<div class="btn-group">
 					<%= link_to "Signup", new_user_path, :class => "btn btn-default" %>
 					<%= link_to "Login", new_session_path, :class => "btn btn-default" %>
 				</div>
+                    <% end %>
+                </div>
 			</div>
 		</div>
 	</div>
