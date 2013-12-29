@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby "2.0.0"
 gem 'bcrypt-ruby', '~> 3.1.0'
 gem 'faker'
 gem 'twitter-bootstrap-rails'
