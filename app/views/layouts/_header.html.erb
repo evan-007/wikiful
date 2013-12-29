@@ -5,7 +5,8 @@
 			<div style="float:right;">
 				<div class="session-controls">
 					<% if current_user %>
-					Logged in as <%= current_user.email %>
+					    Logged in as <%= current_user.email %>
+					    <%= link_to "Log Out", session_path("current"), method: 'delete', :class => 'btn btn-default' %>
 					<% else %>
 				<div class="btn-group">
 					<%= link_to "Signup", new_user_path, :class => "btn btn-default" %>
