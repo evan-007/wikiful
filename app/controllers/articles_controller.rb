@@ -1,7 +1,11 @@
 class ArticlesController < ApplicationController
   before_filter :authorize, only: [:new]
   def index
-  	@articles = Article.order(updated_at: :desc).limit(25)
+    if params[:search]
+      @articles = Article.search(params[:search]).order(created_at: :desc)
+    else
+      @articles = Article.order(updated_at: :desc).limit(25)
+    end
   end
 
   def show
