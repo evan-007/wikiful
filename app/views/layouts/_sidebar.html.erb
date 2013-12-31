@@ -12,3 +12,7 @@
 	<h4>About Wikiful</h4>
 		<p>It's a project for thinkful</p>
 </div>
+<%= form_tag articles_path do %>
+	<p><%= text_field_tag :search %></p>
+	<p><%= submit_tag "Search" %></p>
+	<% end %>
